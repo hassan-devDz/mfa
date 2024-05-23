@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Icon Website -->
+    <link rel="icon" href="" type="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>الرئيسية</title>
+    <!-- files Css -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Link Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        body {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
+}
+.nav-two {
+    display: none;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.section.visible {
+    opacity: 1;
+}
+      .service-details {
+        display: none;
+        animation: fadeIn 1s;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .service-active {
+        display: block !important;
+        animation: fadeIn 1s;
+      }
+
+      .ser ul li.active {
+        background-color: #d5d4d4;
+      }
+@keyframes imageAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* تحديد الانيميشن للنص */
+@keyframes textAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* تحديد الانيميشن للوصف */
+@keyframes descriptionAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* تحديد الانيميشن للزر */
+@keyframes buttonAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* تطبيق الانيميشن على الصورة والنص والوصف والزر */
+.carousel-caption img {
+    opacity: 0; /* جعل الصورة مختفية أولاً */
+    animation: imageAnimation 0.7s ease-out forwards;
+}
+
+.carousel-caption h5 {
+    opacity: 0; /* جعل النص مختفيًا أولاً */
+    animation: textAnimation 0.7s ease-out 0.7s forwards; /* تأخير 0.7s */
+}
+
+.carousel-caption p {
+    opacity: 0; /* جعل الوصف مختفيًا أولاً */
+    animation: descriptionAnimation 0.7s ease-out 1.4s forwards; /* تأخير 1.4s */
+}
+
+.carousel-caption a {
+    opacity: 0; /* جعل الزر مختفيًا أولاً */
+    animation: buttonAnimation 0.7s ease-out 2.1s forwards; /* تأخير 2.1s */
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="page">
+          <div class="container-fluid">
+          
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+             
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#">Action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex mt-3" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      <!-- Start Nav -->
+      <div class="nav">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="box-right">
+                <div class="one">
+                  <a href="#">نسخة تجريبية</a>
+                </div>
+                <div class="box-left">
+                  <span>08 ذو القعدة 1445</span>
+                  <img src="img/calendar.png" alt="img" />
+                  <div class="dropdown">
+                    <button
+                      class="btn btn-secondary dropdown-toggle"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      اللغة العربية
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">English</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Nav -->
+      <!-- Start Nav Two -->
+      <div class="nav-two">
+        <div class="container">
+          <div class="info">
+            <div class="logo">
+               <button
+                class="navbar-toggler mx-1 img-two border-0"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar"
+                aria-label="Toggle navigation"
+              >
+               <img class="img-two m-0" src="img/menu-active.png" alt=""  />
+              </button>
+              <img src="img/takamol-logo.png" alt="" />
+            </div>
+            <div class="links">
+              <ul class="">
+                <li><a class="active" href="#">الرئيسية</a></li>
+                <li><a href="#">الهيئة</a></li>
+                <li><a href="#">الأخبار</a></li>
+                <li><a href="#">الخدمات الالكترونية</a></li>
+                <li><a href="#">التواصل</a></li>
+                <li><a href="#">الوظائف</a></li>
+              </ul>
+            </div>
+            <div class="button">
+              <a href="#">الدخول الي الخدمة</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Nav Two -->
+      <!-- Start Landing  -->
+      <div
+        id="carouselExampleDark"
+        class="carousel carousel-dark slide"
+        data-bs-ride="carousel"
+      >
+        <div class="container-fluid">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="0"
+              class="active bg-white"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+              class="bg-white"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+              class="bg-white"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <img src="img/place3.jpg" class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>The "Great One"</h5>
+                <p>After 30 days of travel across the world...</p>
+                <a class="btn main-btn" href="#">Discover More</a>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="img/place3.jpg" class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>The "Great two"</h5>
+                <p>After 30 days of travel across the world...</p>
+                <a class="btn main-btn" href="#">Discover More</a>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="img/place3.jpg" class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>The "Great thamer"</h5>
+                <p>After 30 days of travel across the world...</p>
+                >
+                <a class="btn main-btn" href="#">Discover More</a>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <!-- End Landing  -->
+      <!-- Start Service -->
+      <div class="service section">
+        <div class="container">
+          <div class="ser">
+            <h2>الخدمات الرقمية</h2>
+            <ul>
+              <li onclick="showService('gov-business')" id="gov-business-btn"class="active">
+                <img src="img/hr-person.png" alt="" />
+                جهات حكومية وقطاع الأعمال
+              </li>
+              <li
+                onclick="showService('resident')"
+                id="resident-btn"
+                
+              >
+                <img src="img/hr-person.png" alt="" />
+                مقيم
+              </li>
+              <li onclick="showService('visitor')" id="visitor-btn">
+                <img src="img/hr-person.png" alt="" />
+                زائر
+              </li>
+              <li onclick="showService('student')" id="student-btn">
+                <img src="img/hr-person.png" alt="" />
+                طلاب
+              </li>
+              <li onclick="showService('all')" id="all-btn">
+                <img src="img/hr-person.png" alt="" />
+                الكل
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="service-content" class="container">
+          <div
+            id="gov-business"
+            class="service-details py-4"
+            style="display: none"
+          >
+            خدمات الجهات الحكومية وقطاع الأعمال
+          </div>
+          <div id="resident" class="service-details py-4" style="display: none">
+            خدمات المقيمين
+          </div>
+          <div id="visitor" class="service-details py-4" style="display: none">
+            خدمات الزائرين
+          </div>
+          <div id="student" class="service-details py-4" style="display: none">
+            خدمات الطلاب
+          </div>
+        </div>
+      </div>
+      <div class="service-two section">
+        <div class="container">
+          <h2>الخدمات الأكثر استخداماً</h2>
+          <div class="row">
+            <div class="col-md-6 col-sm-6 col-lg-3">
+              <div class="box">
+                <div class="image">
+                  <img src="img/copy.png" alt="" />
+                </div>
+                <div class="text">
+                  <h3>طلب تمديد تأشيرة العودة</h3>
+                  <p>خدمة تتيح للمواطن والمقيم تقديم طلب تمديد تأشيرة العودة</p>
+                </div>
+                <div class="link">
+                  <a href="#"
+                    >المزيد
+                    <img src="img/arrow-left.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-lg-3">
+              <div class="box">
+                <div class="image">
+                  <img src="img/copy.png" alt="" />
+                </div>
+                <div class="text">
+                  <h3>طلب زيارة شخصية</h3>
+                  <p>
+                    خدمة لطلب زيارة اشخاص ليس لهم صفة تجارية او عائلية بطالب
+                    التأشيرة
+                  </p>
+                </div>
+                <div class="link">
+                  <a href="#"
+                    >المزيد
+                    <img src="img/arrow-left.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-lg-3">
+              <div class="box">
+                <div class="image">
+                  <img src="img/copy.png" alt="" />
+                </div>
+                <div class="text">
+                  <h3>طلب تأشيرة حج</h3>
+                  <p>
+                    هي خدمة لطلب تأشيرة حج لمن لديهم موافقة من الجهات المختصة
+                  </p>
+                </div>
+                <div class="link">
+                  <a href="#"
+                    >المزيد
+                    <img src="img/arrow-left.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-lg-3">
+              <div class="box">
+                <div class="image">
+                  <img src="img/copy.png" alt="" />
+                </div>
+                <div class="text">
+                  <h3>تأكيد اصدار شهادة صحية</h3>
+                  <p>
+                    هذه الخدمات تمكن الزائر أو مكاتب الادخال من التأكد من اصدار
+                    الشهادة الصحية
+                  </p>
+                </div>
+                <div class="link">
+                  <a href="#"
+                    >المزيد
+                    <img src="img/arrow-left.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Service -->
+      <!-- Start Information -->
+      <div class="information section">
+        <div class="container">
+          <h2>تعرف علي المملكة</h2>
+          <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-3">
+              <div class="box">
+                <img src="img/palm-tree.png" alt="" />
+                <h4>القيادة السعودية</h4>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3">
+              <div class="box">
+                <img src="img/palm-tree.png" alt="" />
+                <h4>اليوم الوطني</h4>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3">
+              <div class="box">
+                <img src="img/palm-tree.png" alt="" />
+                <h4>رؤية المملكة</h4>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3">
+              <div class="box">
+                <img src="img/palm-tree.png" alt="" />
+                <h4>تاريخ المملكة</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Information -->
+      <!-- Start News -->
+      <div class="news section">
+        <div class="container">
+          <div class="news-header">
+            <div class="right">
+              <img src="img/slack-logo.png" alt="" />
+              <h5>الأخبار</h5>
+            </div>
+            <div class="left">
+              <div class="link">
+                <a href="#"
+                  >جميع الأخبار
+                  <img src="img/arrow-left.png" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-4">
+              <div class="box">
+                <div class="image">
+                  <img src="img/statistics.jpg" alt="" />
+                </div>
+                <div class="text">
+                  <h6>مايو 15 2024</h6>
+                  <p>
+                    التدريب التقني توفر أكثر من 114 ألف فرصة وظيفية لخريجين
+                    العام الماضي
+                  </p>
+                  <a href="#"
+                    >اقرأ المزيد
+                    <img src="img/arrow-left.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="box">
+                <div class="image">
+                  <img src="img/statistics.jpg" alt="" />
+                </div>
+                <div class="text">
+                  <h6>مايو 15 2024</h6>
+                  <p>
+                    التدريب التقني توفر أكثر من 114 ألف فرصة وظيفية لخريجين
+                    العام الماضي
+                  </p>
+                  <a href="#"
+                    >اقرأ المزيد
+                    <img src="img/arrow-left.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="box">
+                <div class="image">
+                  <img src="img/statistics.jpg" alt="" />
+                </div>
+                <div class="text">
+                  <h6>مايو 15 2024</h6>
+                  <p>
+                    التدريب التقني توفر أكثر من 114 ألف فرصة وظيفية لخريجين
+                    العام الماضي
+                  </p>
+                  <a href="#"
+                    >اقرأ المزيد
+                    <img src="img/arrow-left.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End News -->
+      <!-- Start Footer -->
+      <div class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-3">
+              <div class="box">
+                <h6>المؤسسة</h6>
+                <ul>
+                  <li><a href="#">اتصل بنا</a></li>
+                  <li><a href="#">الدعم الفني</a></li>
+                  <li><a href="#">الدعم الفني بلغة الاشارة</a></li>
+                  <li><a href="#">الاسألة الشائعة</a></li>
+                  <li><a href="#">بلاغ عن فساد (نزاهة)</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="box">
+                <h6>السياسات</h6>
+                <ul>
+                  <li><a href="#">اتصل بنا</a></li>
+                  <li><a href="#">الدعم الفني</a></li>
+                  <li><a href="#">الدعم الفني بلغة الاشارة</a></li>
+                  <li><a href="#">الاسألة الشائعة</a></li>
+                  <li><a href="#">بلاغ عن فساد (نزاهة)</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="box">
+                <h6>تواصل معنا</h6>
+                <ul>
+                  <li><a href="#">اتصل بنا</a></li>
+                  <li><a href="#">الدعم الفني</a></li>
+                  <li><a href="#">الدعم الفني بلغة الاشارة</a></li>
+                  <li><a href="#">الاسألة الشائعة</a></li>
+                  <li><a href="#">بلاغ عن فساد (نزاهة)</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="box">
+                <div class="info">
+                  <img src="img/takamol-logo.png" alt="" />
+                </div>
+                <div class="icon">
+                  <a href="#"><img src="img/facebook.png" alt="" /></a>
+                  <a href="#"><img src="img/instagram.png" alt="" /></a>
+                  <a href="#"><img src="img/linkedin.png" alt="" /></a>
+                  <a href="#"><img src="img/snapchat.png" alt="" /></a>
+                  <a href="#"><img src="img/twitter-alt.png" alt="" /></a>
+                  <a href="#"><img src="img/youtube.png" alt="" /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="copyrigth">
+            <p>جميع الحقوق محفوظة المؤسسة العامة للتدريب التقني والمهني ©</p>
+            <p>
+              <span>خريطة الموقع</span>
+              <span>شروط الاستخدام</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- End Footer -->
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    document.body.classList.add('loaded');
+    
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+    
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const navBar = document.querySelector('.nav-two');
+    navBar.style.display = 'block';
+});
+
+  document.addEventListener("DOMContentLoaded", function() {
+    // Display the first service initially
+    document.getElementById('gov-business').classList.add('active');
+    document.getElementById('gov-business').style.display = 'block';
+
+    // Function to show the selected service
+    window.showService = function(service) {
+      // Remove active class from all list items
+      var buttons = document.querySelectorAll('ul li');
+      buttons.forEach(function(btn) {
+        btn.classList.remove('active');
+      });
+
+      // Add active class to the clicked button
+      document.getElementById(service + '-btn').classList.add('active');
+
+      // Hide all service details
+      var details = document.querySelectorAll('.service-details');
+      details.forEach(function(detail) {
+        detail.classList.remove('active');
+        detail.style.display = 'none';
+      });
+
+      // Show the selected service details with animation
+      if (service === 'all') {
+        details.forEach(function(detail) {
+          detail.classList.add('active');
+          detail.style.display = 'block';
+        });
+      } else {
+        var selectedDetail = document.getElementById(service);
+        selectedDetail.classList.add('active');
+        selectedDetail.style.display = 'block';
+      }
+    };
+  });
+</script>
+
+  </body>
+</html>
